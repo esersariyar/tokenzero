@@ -4,6 +4,11 @@
 
 TokenZero is a small CLI and library that compresses and prepares context — files, logs, JSON, markdown, project trees — before you send it to Claude Code or any other LLM tool. It works **entirely locally** with no API keys.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/tokenzero-dark.png">
+  <img alt="TokenZero" src=".github/assets/tokenzero-light.png" width="100%">
+</picture>
+
 ## Why it exists
 
 Sending raw project context to LLMs wastes tokens on whitespace, repeated lines, verbose JSON, lock files, binaries, and irrelevant directories. TokenZero strips that out safely so what reaches the model is smaller and clearer.
