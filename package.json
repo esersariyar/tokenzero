@@ -1,0 +1,59 @@
+{
+  "name": "tokenzero",
+  "version": "0.1.0",
+  "description": "Local context optimizer for Claude Code and LLM workflows",
+  "author": "Eser Sariyar (https://github.com/esersariyar)",
+  "license": "MIT",
+  "homepage": "https://github.com/esersariyar/tokenzero#readme",
+  "bugs": {
+    "url": "https://github.com/esersariyar/tokenzero/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esersariyar/tokenzero.git"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "llm",
+    "tokens",
+    "prompt",
+    "context",
+    "compressor",
+    "ai",
+    "cli",
+    "typescript"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "tokenzero": "dist/cli/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "ignore": "^5.3.2",
+    "picomatch": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/picomatch": "^3.0.1",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

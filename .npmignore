@@ -1,0 +1,11 @@
+src
+tests
+tsconfig.json
+vitest.config.ts
+.tokenzero
+.github
+.vscode
+coverage
+*.log
+.env
+.env.*
