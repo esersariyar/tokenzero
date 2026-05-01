@@ -1,6 +1,6 @@
 {
   "name": "tokenzero",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Local context optimizer for Claude Code and LLM workflows",
   "author": "Eser Sariyar (https://github.com/esersariyar)",
   "license": "MIT",

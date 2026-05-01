@@ -110,6 +110,32 @@ Prints a report: total files scanned, included, ignored, biggest files, JSON fil
 npx tokenzero analyze .
 ```
 
+### `tokenzero proxy`
+
+Runs a local Anthropic-compatible proxy that compresses outgoing messages before forwarding them to `https://api.anthropic.com`. Your API key never leaves the request — TokenZero only forwards headers as-is. Nothing is logged or persisted.
+
+```bash
+npx tokenzero proxy
+# tokenzero proxy listening on http://127.0.0.1:3000
+```
+
+Then point any Anthropic SDK or CLI at the proxy:
+
+```bash
+export ANTHROPIC_BASE_URL=http://127.0.0.1:3000
+claude   # or any tool using the official Anthropic SDK
+```
+
+Every `POST /v1/messages` request is intercepted, its `system` and `messages[].content` text fields are whitespace-compressed (code blocks, URLs, identifiers preserved), then forwarded. Streaming responses, tool use, and image blocks pass through untouched.
+
+Flags:
+
+- `-p, --port <n>` port to listen on (default 3000)
+- `--host <host>` host to bind (default 127.0.0.1)
+- `--upstream <url>` upstream API base URL (default https://api.anthropic.com)
+- `--no-compress` forward without compression (useful for debugging)
+- `--quiet` suppress per-request log output
+
 ## Claude Code usage
 
 ```bash

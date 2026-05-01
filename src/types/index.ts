@@ -76,3 +76,19 @@ export type TokenZeroConfig = {
   out: string;
   ignore: string[];
 };
+
+export type ProxyOptions = {
+  port?: number;
+  host?: string;
+  upstream?: string;
+  compressText?: boolean;
+  quiet?: boolean;
+};
+
+export type ProxyStats = {
+  requests: number;
+  beforeChars: number;
+  afterChars: number;
+  savedChars: number;
+  savedTokensEstimate: number;
+};

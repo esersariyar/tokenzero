@@ -5,6 +5,7 @@ import { runPack } from './commands/packCommand';
 import { runCompress } from './commands/compressCommand';
 import { runJson } from './commands/jsonCommand';
 import { runAnalyze } from './commands/analyzeCommand';
+import { runProxy } from './commands/proxyCommand';
 
 const pkg = require('../../package.json') as { version: string };
 
@@ -91,6 +92,22 @@ async function main(): Promise<void> {
     .action(async (paths: string[], opts) => {
       try {
         await runAnalyze(paths, opts);
+      } catch (err) {
+        fail(err);
+      }
+    });
+
+  program
+    .command('proxy')
+    .description('Run a local Anthropic-compatible proxy that compresses outgoing messages')
+    .option('-p, --port <n>', 'port to listen on (default: 3000)')
+    .option('--host <host>', 'host to bind (default: 127.0.0.1)')
+    .option('--upstream <url>', 'upstream API base URL (default: https://api.anthropic.com)')
+    .option('--no-compress', 'forward requests without compression')
+    .option('--quiet', 'suppress per-request log output')
+    .action(async (opts) => {
+      try {
+        await runProxy(opts);
       } catch (err) {
         fail(err);
       }
