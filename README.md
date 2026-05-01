@@ -1,13 +1,18 @@
-# TokenZero
-
-**Local context optimizer for Claude Code and LLM workflows.**
-
-TokenZero is a small CLI and library that compresses and prepares context — files, logs, JSON, markdown, project trees — before you send it to Claude Code or any other LLM tool. It works **entirely locally** with no API keys.
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/assets/tokenzero-dark.png">
   <img alt="TokenZero" src=".github/assets/tokenzero-light.png" width="100%">
 </picture>
+
+# TokenZero
+
+[![npm version](https://img.shields.io/npm/v/tokenzero.svg)](https://www.npmjs.com/package/tokenzero)
+[![npm downloads](https://img.shields.io/npm/dm/tokenzero.svg)](https://www.npmjs.com/package/tokenzero)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D18-green.svg)](https://nodejs.org/)
+
+**Local context optimizer for Claude Code and LLM workflows.**
+
+TokenZero is a small CLI and library that compresses and prepares context — files, logs, JSON, markdown, project trees — before you send it to Claude Code or any other LLM tool. It works **entirely locally** with no API keys.
 
 ## Why it exists
 
