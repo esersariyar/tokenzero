@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/assets/tokenzero-dark.png">
-  <img alt="TokenZero" src=".github/assets/tokenzero-light.png" width="100%" height="auto" style="max-width: 800px; display: block; margin: 0 auto;">
+  <img alt="TokenZero" src=".github/assets/tokenzero-light.png" width="100%" height="auto" style="max-width: 800px; display: block; margin: 0 auto 2rem;">
 </picture>
 
 # TokenZero
